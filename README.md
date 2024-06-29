@@ -1,14 +1,5 @@
-Docker
-
-#Docker Commands
-
-#CLOUDBLITZ
-
-## DevOps B4
-
+## DOCKER 
 git clone https://github.com/Bhushan-88/Docker_repo.git
-
-## Docker
 
 ### Containers
 
@@ -16,16 +7,30 @@ Container is runnable entity of the docker container image To run container, at 
 
 Once container is terminated, you can not retrive the container
 
-### Docker Commands
+## Docker installation
+ sudo yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
 
-docker run <IMAGE> # run container in attached way
+sudo yum clean all
 
-docker run - <IMAGE> # run container in dettached way
+ sudo yum install docker-ce docker-ce-cli containerd.io 
+ docker-buildx-plugin docker-compose-plugin
 
-docker ps # to list running containers
+sudo systemctl start docker
 
-docker inspect <CONTAINER_ID OR CONTATENR_NAME> #Detailed info about container
+## Docker Commands:
+docker run nginx
+docker run -d nginx (for detach and run in backgound)
+docker run ps (showing containers)
+docker run ps -a (lis of all container)
 docker run -d -p 8080:80 <image> # -p map HOST_PORT:CONTAINER_PORT
-docker run -d -P <image> # -P map random host port with container port
-docker images # List of docker images in local system 
+docker inspect <image name or id> (to detailed info of image)
+docker images  (List of docker images in local system )
+docker exec -it <container id> or <name> ls (we can ls existing container )
+docker exec -it <container id> or <name> bash (to enter existing container & run commands)
+docker stats <container id> (will give you container stats)
+docker kill <container id> (to forcefully stop)
+docker rm <container id> (to terminate )
 
+# Port mapping 
+docker run -d -P <image> # -P map random host port with container port
+docker run -d -p 8080:80 --name my-container nginx (to change container name)
