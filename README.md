@@ -30,6 +30,14 @@ docker exec -it <container id> or <name> bash (to enter existing container & run
 docker stats <container id> (will give you container stats)
 docker kill <container id> (to forcefully stop)
 docker rm <container id> (to terminate )
+docker rm -f <container id> (forcefully terminate running container)
+docker ps -q (it will show only contnr ids)
+docker kill 'docker ps -q' (to kill all container)
+docker logs <container id> (container logs)
+docker cp index.html b83c554ea3d8:/usr/share/nginx/html/index.html
+docker top <container id>
+
+ 
 
 # Port mapping 
 docker run -d -P <image> # -P map random host port with container port
