@@ -43,9 +43,11 @@ docker tag <img id> (to give tag for created image)
 docker tag <img id> bhushandurgawli/my-nginx:v1.0.0 (to change image name)
 docker login (to login docker)
 docker push bhushandurgawli/my-nginx:v1.0.0 (to push image on docker registery)
-docker save -o my-nginx.tar <image id> (to archive any container)
-
-
+docker save -o archive-img.tar <image id> (to archive any container)
+ docker load -i archive-img.tar ( load image from archive file)
+docker image rm 'docker images -q' (to delete all imgs)
+docker rm -f 'docker ps -q' (to remove all containers)
+docker image rm -f <img id>
 
 create docker repo 
 bhushandurgawli/reponame:tag -> image name 
