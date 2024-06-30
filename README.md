@@ -35,8 +35,21 @@ docker ps -q (it will show only contnr ids)
 docker kill 'docker ps -q' (to kill all container)
 docker logs <container id> (container logs)
 docker cp index.html b83c554ea3d8:/usr/share/nginx/html/index.html
-docker top <container id>
+docker top <container id> (it show container process)
+docker pull <image name> (to pull only image )
+(docker run -d -P tomcat:8)
+docker commit <img id> (to create img from existing container)
+docker tag <img id> (to give tag for created image)
+docker tag <img id> bhushandurgawli/my-nginx:v1.0.0 (to change image name)
+docker login (to login docker)
+docker push bhushandurgawli/my-nginx:v1.0.0 (to push image on docker registery)
+docker save -o my-nginx.tar <image id> (to archive any container)
 
+
+
+create docker repo 
+bhushandurgawli/reponame:tag -> image name 
+bhushandurgawli/my-nginx:v1.0.0 
  
 
 # Port mapping 
