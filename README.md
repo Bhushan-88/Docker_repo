@@ -37,22 +37,30 @@ docker logs <container id> (container logs)
 docker cp index.html b83c554ea3d8:/usr/share/nginx/html/index.html
 docker top <container id> (it show container process)
 docker pull <image name> (to pull only image )
-(docker run -d -P tomcat:8)
+(ex:-docker run -d -P tomcat:8)
+docker create nginx (it create container only)
 docker commit <img id> (to create img from existing container)
 docker tag <img id> (to give tag for created image)
 docker tag <img id> bhushandurgawli/my-nginx:v1.0.0 (to change image name)
 docker login (to login docker)
 docker push bhushandurgawli/my-nginx:v1.0.0 (to push image on docker registery)
-docker save -o archive-img.tar <image id> (to archive any container)
- docker load -i archive-img.tar ( load image from archive file)
+docker save -o archive-img.tar <image id> (to save image as archive any container)
+docker load -i archive-img.tar ( load image from archive file)
 docker image rm 'docker images -q' (to delete all imgs)
-docker rm -f 'docker ps -q' (to remove all containers)
+docker rm $(docker ps -a -q) (to remove all containers)
 docker image rm -f <img id>
 
-create docker repo 
+# create docker repo docker hub
 bhushandurgawli/reponame:tag -> image name 
 bhushandurgawli/my-nginx:v1.0.0 
  
+# Docker Network
+docker network
+docker network list
+docker inspect 9bde5a895ee0 (docker network id)
+
+
+
 
 # Port mapping 
 docker run -d -P <image> # -P map random host port with container port
