@@ -43,7 +43,7 @@ docker commit <img id> (to create img from existing container)
 docker tag <img id> (to give tag for created image)
 docker tag <img id> bhushandurgawli/my-nginx:v1.0.0 (to change image name)
 docker login (to login docker)
-docker push bhushandurgawli/my-nginx:v1.0.0 (to push image on docker registery)
+docker push bhushandurgawli/my-nginx:v1.0.0 (to push image on docker registery) 
 docker save -o archive-img.tar <image id> (to save image as archive any container)
 docker load -i archive-img.tar ( load image from archive file)
 docker image rm 'docker images -q' (to delete all imgs)
@@ -58,8 +58,9 @@ bhushandurgawli/my-nginx:v1.0.0
 docker network
 docker network list
 docker inspect 9bde5a895ee0 (docker network id)
-
-
+docker run -d --network host nginx (run container to difrent network)
+docker inspect eeb392af6cda |grep IP
+docker network create my-net --driver=bridge --subnet="192.168.0.0/16" (create network )
 
 
 # Port mapping 
