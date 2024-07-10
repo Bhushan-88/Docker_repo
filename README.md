@@ -58,7 +58,7 @@ bhushandurgawli/my-nginx:v1.0.0
 docker network
 docker network list
 docker inspect 9bde5a895ee0 (docker network id)
-docker run -d --network host nginx (run container to difrent network)
+docker run -d --network host nginx (run container on difrent network)
 docker inspect eeb392af6cda |grep IP
 docker network create my-net --driver=bridge --subnet="192.168.0.0/16" (create bridge network )
 
