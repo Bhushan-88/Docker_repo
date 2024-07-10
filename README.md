@@ -62,6 +62,11 @@ docker run -d --network host nginx (run container on difrent network)
 docker inspect eeb392af6cda |grep IP
 docker network create my-net --driver=bridge --subnet="192.168.0.0/16" (create bridge network )
 
+# Docker Volume
+docker volume list
+docker create volume my-vol 
+docker run -d -v my-vol:/usr/share/nginx/html nginx
+cd /var/lib/docker
 
 # Port mapping 
 docker run -d -P <image> # -P map random host port with container port
